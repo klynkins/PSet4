@@ -1,0 +1,16 @@
+fread(data, size, number, inptr);
+
+fread(buffer, 1, 512, raw_file);
+
+fread(buffer, 512, 1, raw_file);
+
+if (buffer[0] == 0xff &&
+    buffer[1] == 0xd8 &&
+    buffer[2] == 0xff &&
+    (buffer[3] == 0xf0) == 0xe0)
+
+sprintf(filename, "%031i.jpg", 2);
+FILE *img = fopen(filename, "w");
+
+fwrite(data, size, number, outptr);
+
